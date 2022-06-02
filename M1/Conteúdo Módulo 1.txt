@@ -1,0 +1,598 @@
+Lógica de programação
+========================================
+A1
+
+mais importante resolver o problema do que digitar o código.
+
+o que é lógica: coerencia de raciocínio de ideias.
+equecia coerente, regular e necessária de acontecimentos, coisas.
+
+significa contextualizar a lógica na programação
+de computadores, buscando a melhor sequencia de ações para solucionar problmeas
+
+
+metacognição: Pensar como você pensa.
+
+abstração=fazer de maneira mais simples.
+===========================================
+A2
+
+Fluxograma:
+é uma ferramenta utilizada para representar graficamente algoritmo, isto é, a sequencia lógica e coerente do fluxo de dados.
+
+uma variável é um espaço no computador que representa alguma coisa.
+
+o que é um pseudo código?
+ forma generica de escrever algoritmo, em uma linguagem
+nativa por exemplo.
+
+==========================================
+A4
+
+EXPRESSÕES ARITMÉTICAS
+
+São expressões que utilizam operadores aritméticos e funções aritméticas envolvendo constantes e variáveis.
+
+operadores aritméticos: +,-,*/,^(potenciação),%
+
+EXPRESSÕES LITERAIS
+São expressões com constantes e/ou variáveis que tem como resultado valores literais. Iremos utilizar as expressões literais na atribuição de valor para uma variável ou constante.
+
+Exemplos:
+Nome="José da silva"
+Nome<-"josé da silva"
+media=(nota1+nota2+nota3+nota4)/4
+
+EXPRESSÕES RELACIONAIS
+"São expressões compostas por outras expressões ou variáveis numericas.
+Sempre vai retornar valores verdadeiros ou falsos.
+
+
+TOMADAS DE DECISÃO
+Quando escrevemos programas, geralmente ocorre a necessidade de decidir o que fazer dependendo de alguma condição encontrada durante a execução"
+========================================
+
+A5
+CONCATENAÇÃO
+Concatenação é um termo usado em computação para designar a operação de unir o conteúdo de duas strings*.
+
+String é uma sequencia de caracteres.
+
+
+========================================
+PORTUGOL
+
+A1
+
+Aprender uma estrutura de repetição
+
+Uma esstrutura que permite executarmais de uma ves
+o mesmo comando ou conjunto de comandos, de acordo com uma
+condição ou com um contador.
+
+====================================================
+
+A2
+
+Introdução ao portugol.
+
+O que são linguagens de programação?
+
+Linguagem de programação é uma linguagem escrita e foral que especifica um conjunto de instruções e regras usadas para gerar programas (software).
+
+compiladas: utilizam um compilador, o código fonte é executado diretamente pelo computador, um arquivo executável.
+
+Interpretadas:
+É uma linguagem de programação em que o código fonte é executado por um programa de computador chamado interpretador, que em seguida é executado pelo sistema operacional ou processador.
+
+Pseudocódigo: Portugol pseudolinguagem que permite ao leitor desenvolver algoritmos estruturados em portugues de forma simples e intuitiva, independentemente de lingagem de programação.
+
+=======================================================
+
+A3
+Aprender a utilizar os desvios condicionais
+(estruturas de decisão) no portugol.
+
+Boas práticas de programação - comentários
+
+Desvio condicional - Se
+
+é utilizada a palavra reservada se, a condição a ser testada entre parenteses e as instruções que devem ser executadas entre chaves caso o desvio seja verdadeiro.
+
+condição tem que estar em parenteses, e se for verdadeiro, a condiçãotem que estar entre aspas.
+
+Ex.:
+se(media>=7){
+	escreva("parabéns!!Voc^foi aprovado!!")
+}
+
+senao {
+     escreva("\n" + "infelizmente você foi reprovado")
+}
+
+---
+comentário é utilizando //
+ 
+---------------------------------
+
+Desvio condicional - caso
+
+similar aos comandos de se e senão, e reduz a complexidade na escolha de diversas opções.
+Apesar de suas similaridades com o se, ele possui algumas diferenças. Neste comando não é possível o uso de operadores lógicos, ele apenas trabalha com valores definidos.
+
+funcao inicio()
+{
+escreva("Escolha uma das opções: 1 - Abrir Netflix 2 - Abrir Amazon Prime 3 - HBO GO 4 - Sair do menu")
+inteiro menu=0
+escreva ("\n" + "Sua escolha:")
+leia(menu)
+
+escolha (menu)
+{
+caso 1:
+escreva ("ok! Abrir Netflix!!")
+pare
+
+caso 2:
+escreva ("ok! Abrir Amazon Prime!!")
+pare
+
+caso 3:
+escreva ("ok! Abrir HBO GO!!")
+pare
+
+caso 4:
+escreva ("saindo do menu...")
+pare
+
+caso contrario:
+escreva ("você deve escolher as opções 1,2, 3 ou 4")
+}
+
+==================================
+A4
+
+Trabalhando com laços de repetição em portugol
+
+Dentro da lógica de programação é uma estrutura que permite executar mais de uma vez o mesmo comando ou conjunto de comandos, de acordo com uma condição ou com um contador.
+
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro contador,limite,resultado,tabuada
+		
+		contador=0
+		limite= 100
+
+		escreva("qual tabuada você quer que eu resolva?:")
+		leia(tabuada)
+		
+		faca{
+			resultado = tabuada*contador
+			escreva(tabuada + "x" + contador + "=" + resultado + "\n")
+			contador ++     	//contador++ é igual a contador + um, agora ele vale 1// contador=contador+1
+			
+		}enquanto (contador<=limite)
+	}
+}
+
+
+===================================
+Última aula.
+
+
+MATRIZES E VETORES
+
+Qual sua aplicação prática?
+
+Uma matriz é uma coleção de variáveis de mesmo tipo, acessíveis com um único nome e armazenados contiguammente na memória.
+
+A individualização de cada variável de um vetor é feita através do uso de indices.
+
+Os vetores são matrizes de uma só dimensão.
+
+ex.:
+
+cadeia frutas [4]
+inteiro contador = 0
+
+frutas[0] = "maçã"
+frutas [1] = "pera"
+frutas [2] = "uva"
+frutas [3] = "java"
+
+faca {
+	escreva (frutas[contador])
+	contador++
+}
+enquanto (contador <=3)
+
+
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro contador=0
+		cadeia cesta[][]={{"pera","100"},{"jaca","200"},{"maça","900"},{"uva","89"}}
+
+		faca{
+
+			escreva("produto: " + cesta[contador][0]+" quantidade:"+cesta[contador][1]+"\n")
+			contador++
+		}enquanto(contador<=3)
+	}
+}
+
+
+
+Exercício finalalizado:::::
+
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro contador=0
+escreva( "Abaixo estão os contatos profissionais disponíveis até o momento." + "\n")
+
+		cadeia contato[][]={{"João| ", "São Paulo| ", "(11) 9999-5241| "}
+		, {"Maria| ", "Ribeirão Preto| ", "(16) 9999-8596| "},{"Ana| ", "Manaus| ", "(92) 9999-8574| "}}
+
+faca{
+	escreva("Nome: " + contato[contador][0] + "Cidade: " + contato[contador][1] + "Telefone: " + contato[contador][2] + "\n")
+	contador++
+	
+}enquanto (contador<=2)
+
+		
+	
+	
+	
+	}
+}
+
+
+================================================
+
+
+
+
+
+
+MÓDULO
+
+INTRODUÇÃO AO GIT E AO GIT HUB
+
+
+
+
+================================================
+
+
+A1
+
+Entendendo o que é Git e sua Importância
+
+Git foi criado em 2005 e é um sistema de versionamento de código distribuido criado por Linus Torvalds.
+
+Software não é trabalho de um homem só, é escrito de forma colaborativa por conter grande quantidade de códigos.
+
+Git e Github não são a mesma coisa.
+
+beneficios:
+1-controle de versão
+2-armazenamento em nuvem
+3-trabalho em equipe
+4-melhorar seu código
+5-reconhecimento
+
+Github vem funcionando como uma rede social.
+
+
+==============================================
+
+
+A2
+
+Comandos básicos para um bom desempenho no terminal
+
+A maioria dos programas operacionais possui comandos gráficos.
+
+O git é por linha de comando.
+
+
+O que vamos aprender a fazer?
+
+-Mudar pastas
+-listar as pastas
+-criar pastas/arquivos
+-deletar pastas/arquivos
+
+Windows
+
+-cd = chand direct permite navegar dentro dos diretórios
+-cd .. = voltar para o diretório anterior.
+-dir = lista diretórios da pasta atual.
+-mkdir = criar pastas
+-rmdir = remover pasta + conteúdo interno. /S /Q = para remover independente de estar cheia.
+-cls = limpar tela
+-tecla "tabe" completa os nomes
+-echo devolve. Ex: echo hello> hello.txt = criar um arquivo.
+-del+pasta= deletar (arquivos dentro de pasta)
+- seta pra cima navega pelos comandos executados.
+-pwd = mostra caminho completo.
+-cntrl + l limpa tudo.
+
+
+
+Unix
+
+-ls
+-cd
+-is
+-mkdir
+-rm -rf
+
+
+============================================
+
+A3
+REALIZANDO A INTSTALAÇÃO DO GIT
+
+site: git-scm.com
+
+instala como qualquer outro programa.
+
+============================================
+
+A4
+TÓPICOS FUNDAMENTAIS PARA ENTENDER O FUNCIONAMENTO DO GIT.
+
+- SHA1
+
+Significa secure hash algorithm (algoritmo de hash seguro), é um conjunto de funções hash criptográficas projetadas pela NSA (Agência de segurança nacional dos EUA).
+
+É uma forma curta de representar o arquivo.
+
+comando: openssl sha1 + nome arquivo, abre o arquivo e gera a chave sha1.
+
+- Objetos fundamentais
+- Sistema distribuido
+- Segurança
+
+===========================================
+
+A5
+OBJETOS INTERNOS DO GIT
+
+BLOBS: contem metados. Bolhas.
+
+hash-object --studin
+devolve o sha1.
+
+openssl sha1
+gera o hash
+
+echo 'conteudo' | git hash-object --stdin
+
+echo -e 'bolb 9\0conteudo' | openssl sha1
+
+Os arquivos ficam guardados dentro do Blob.
+
+Blob
+\0
+ola mundo (conteudo)
+
+TREES: Arvores | Armazenam blobs e apontam.
+
+Tree
+\0
+blob sa4d8s texto.txt
+
+
+COMMITS: É o que junta tudo.
+Os commits também possuem sha1.
+Se altera uma blob, ele gera uma hash diferente.
+
+Commit é única para cada autor.
+
+Sistema distribuido seguro pq?
+Pq o git mantem uma estrutura confiavel praticamente imutável sem que haja uma forte alteração visível.
+
+=================================================
+
+A6
+CHAVES SSH E TOKEN
+
+Chave ssh é uma forma de estabelecer uma conexão segura com outra maquina.
+
+A máquina ja fica registrada e não precisa nem mesmo fazer login.
+
+COMANDOS PARA GERAR CHAVE SSH:
+Abrir git bash
+Desktop
+comando:
+ssh-keygen -t ed25519 -C balbioficial@gmail.com
+
+
+Your identification has been saved in /c/Users/mathe/.ssh/id_ed25519
+Your public key has been saved in /c/Users/mathe/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:hfucHRqgze6Sp7TRtVndxrteYaoRhvr7soAQfeOSkwc balbioficial@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+|                 |
+|    .    .       |
+|   . E oo .      |
+|    . *+.+.  . o |
+|   . =.oS.ooo .o+|
+|    . =o.+.O..o.o|
+|     .o+o B... ..|
+|     .o++.  o   o|
+|      o+.+=o  .o |
++----[SHA256]-----+
+
+
+a partir do diretório desktop
+
+cd/c/Users/math/.ssh/
+
+ls
+
+cat id_ed25519.pub
+
+===
+O que mostra é sempre a chave publica!
+
+cat: Lista chave
+
+=====
+Chave:
+
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF0j3+/aNkF3J8qHgfVGf6Ch0Eb03+gwP2wegkcZLitx balbioficial@gmail.com
+
+====
+Inicializar o ssh agent, comando que gerencia as chaves.
+
+Comando:
+eval $(ssh-agent -s)
+ls
+ssh-add id_25519
+
+===============
+
+TOKEN DE ACESSO PESSOAL
+
+Se assemelha a senha e longin.
+
+gera no github, guarda, o git vai pedir e na hora de usar o git vai pedir ele.
+
+da pra colocar data de inspiração.
+
+code para clonar: git clone + html
+
+==================================================
+
+A7
+Iniciando o Git e Criando um Commit
+
+PPRIMEIROS COMANDOS COM O GIT
+
+-Iniciar o GIT
+-Iniciar o Versionamento
+-Criar um commit.
+
+-git init
+-git add
+-git commit
+
+Todo comando do git recebe o git na frente.
+
+ls -a = mostra arquivos ocultos.
+
+git config --global user.email "balbioficial@gmail.com"
+'' ''' '' '' user.name Balbi
+
+cria doc texto .md dentro de workspace.
+
+git add *
+
+git commit -m "commit inicial"
+
+
+=================================================
+
+A8
+
+CICLO DE VIDA DOS ARQUIVOS NO GIT
+
+Tracked ou Untracked
+
+Tracked são arquivos que temos ciência deles
+Untracked nós não temos ciência deles
+
+tracked: Unmodified  Modified  Staged
+
+unmodified: voce tem um arquivo que ainda não foi editado.
+modified: voce tem um arquivo que foi modificado.
+staged: está se preparando para fazer parte de um commit.
+
+commit retorna todos os arquivos para unmodified.
+
+
+git status = mostra o status do arquivo.
+
+
+mv pizza.md ./receitas = mv move arquivos.
+
+git add pizza.md receitas/
+
+git commit -m "cria receitas, move arquivo para receitas"
+
+echo > READM.MD
+
+================================================
+
+A9
+
+TRABALHANDO COM O GITHUB
+
+Listar todas as configurações do git: git config --list
+Aperta "Q" para sair.
+
+configurar novamente informações de login:
+git config --global -- unset user.email
+
+para configurar email:
+git config --global user.email "xxx"
+
+para cofigurar nickname:
+git config --global user.name "xxx"
+
+
+para fazer o up tem que fazer o apontamento, para isso basta copiar a segunda url fornecida e utilizar o código:
+
+git remote add origin "+ url"
+
+utiliza o seguinte código para listar os projetos:
+
+git remot -v
+
+para empurrar o arquivo para o repositório, utiliza o seguinte código:
+
+git push origin master 
+
+================================================
+
+A10
+COMO OS CONFLITOS ACONTECEM NO GITHUB E COMO RESOLVÊ-LOS
+
+RESOLVENDO CONFLITOS
+
+para puxar um arquivo e o git tentar juntar as versões para solucionar um problema de atualização:
+git pull orign master
+
+
+=================================================
+
+
+
+
+
+CRIANDO SEU PRIMEIRO REPOSITÓRIO NO GITHUB PARA COMPARTILHAR SEU PROGRESSO
+
+
+
+==================================================
+
+A1
+Relembrando algumas coisinhas
+
+=================================================
+
+A2
+Desafio de projeto
+
